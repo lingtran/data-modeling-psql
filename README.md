@@ -1,7 +1,7 @@
 # Data Engineering - Project 1 - Data Modeling with Postgres
 
 ## Objective
-To optimize queries on song play analysis related to related to user activity and songs being streamed on Sparkify.
+To optimize queries on song play analysis related to user activity and songs being streamed on Sparkify.
 
 ## Methodology
 Data currently resides in two local directories of JSON - (1) user activity on app logs and (2) metadata on the songs in app. We are building an ETL pipeline using Python and SQL to transfer the data into relational tables in Postgres database `sparkifydb`.
@@ -13,13 +13,14 @@ Data currently resides in two local directories of JSON - (1) user activity on a
 * [Queries](#queries)
 
 ## Run scripts
-wip
+
+*-return to [table of contents](#table-of-contents)-*
 
 ## Description of project files
  - `data/` 
     - `/log_data`
     - `/song_data`
- -  `create_tables.py`
+ - `create_tables.py`
     - *drops and creates tables. needs to be run at least once to create `sparkifydb`*
  - `etl.ipynb`
     - *reads and processes a single file from `/song_data` and `/log_data` and loads the data into database tables. This notebook contains detailed instructions on the ETL process for each of the tables.*
@@ -30,8 +31,14 @@ wip
  - `test.ipynb`
     - *displays the first few rows of each table as a way to let us check the database.*
 
+ *-return to [table of contents](#table-of-contents)-*
+
 ## Database schema and ETL pipeline
-wip
+Database star schema with fact table `songplays` and dimension tables `users`, `songs`, `artists`, and `times`.
+
+*-return to [table of contents](#table-of-contents)-*
 
 ## Queries
 wip
+
+*-return to [table of contents](#table-of-contents)-*
