@@ -36,9 +36,9 @@ song_table_create = ("""
     CREATE TABLE IF NOT EXISTS songs (\
         song_id varchar PRIMARY KEY,\
         title varchar NOT NULL,\
-        artist_id varchar NOT NULL REFERENCES artists (artist_id),\
+        artist_id varchar NOT NULL,\
         year int NOT NULL,\
-        duration interval NOT NULL\
+        duration numeric NOT NULL\
     );
 """)
 
@@ -82,6 +82,7 @@ user_table_insert = ("""
 song_table_insert = ("""
     INSERT INTO songs (song_id, title, artist_id, year, duration)
     VALUES (%s, %s, %s, %s, %s)
+    ON CONFLICT (song_id) DO NOTHING
 """)
 
 artist_table_insert = ("""
